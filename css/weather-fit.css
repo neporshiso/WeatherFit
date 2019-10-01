@@ -24,10 +24,6 @@ body {
     align-content: space-between;
 }
 
-.tomorrow-weather { 
-   
-}
-
 .clothing-today {
     display: flex;
     flex-wrap: row wrap;

@@ -52,3 +52,32 @@ function getIcon(zip) {
 getClothes();
 // convertZipToCoordinates(zipCode)
 // getIcon(zipCode)
+
+function printOutfit (temp) { 
+    var outfits = {
+        hot:["T-shirt","Shorts"],
+        warm:["T-shirt","Jeans"],
+        chilly:["T-shirt","Jeans", "Sweater"],
+        cold:["T-shirt","Pants", "Coat" ], 
+        wintry:["Long Sleeves", "Pants", "Hoodie", "Winter Jacket", "Everything you own"]  
+    }; 
+    let myOutfit = 0; 
+    if (temp >= 80) myOutfit = outfits.hot; 
+    if (temp >= 65 && temp < 80) myOutfit = outfits.warm;
+    if (temp >= 45 && temp < 64) myOutfit = outfits.chilly;
+    if (temp >= 25 && temp < 44) myOutfit = outfits.cold;
+    if (temp < 25) myOutfit = outfits.chilly;
+
+    // return myOutfit; 
+    for (i = 0; i < myOutfit.length; i++){
+        console.log(myOutfit[i]);
+    }
+}
+
+
+console.log(printOutfit(79)); 
+
+
+
+
+

@@ -1,4 +1,5 @@
 // ? So far using three APIs.  ZipCode to Lat/Lon API.  DarkSky for weather data.  Open Weather for weather icon.
+// Todo add an event listener to form submit
 
 const apiKey = "1387466109e308e8de851d6f09a87c39";
 const zipCode = "64111";
@@ -8,6 +9,14 @@ function get(url) {
         .then(response => response.json())
         .then(data => data);
 }
+
+// When the zip code form is submitted, grab the zip code, convert it to coordinates and get the weather data
+zipcodeForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // default behavior is to reload the page
+    let zipcodeValue = document.getElementById("zipcodeInput").value;
+    convertZipToCoordinates(zipcodeValue)
+    getIcon(zipcodeValue)
+})  
 
 function convertZipToCoordinates(zip) {
     get(
@@ -41,7 +50,6 @@ function printOutfit (temp) {
 
 
 function getWeather(coordinates) {
-    const para = document.getElementById("p");
     let lat = coordinates[1];
     let lon = coordinates[0];
     let url = `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${apiKey}/${lat},${lon}`;
@@ -50,7 +58,6 @@ function getWeather(coordinates) {
         para.innerHTML = `Feels like ${apparentTemp} degrees Farenheit in ${zipCode}.`;
         // printOutfit(apparentTemp);
     });
-    
 }
 
 function getIcon(zip) {
@@ -76,10 +83,3 @@ function getIcon(zip) {
 // getClothes();
 convertZipToCoordinates(zipCode)
 // getIcon(zipCode)
-
-
-
-
-
-
-

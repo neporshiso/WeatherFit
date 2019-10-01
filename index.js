@@ -27,12 +27,36 @@ function convertZipToCoordinates(zip) {
     });
 }
 
+function printOutfit (temp) { 
+    var outfits = { 
+        hot:["T-shirt","Shorts"],
+        warm:["T-shirt","Jeans"],
+        chilly:["T-shirt","Jeans", "Sweater"],
+        cold:["T-shirt","Pants", "Coat" ], 
+        wintry:["Long Sleeves", "Pants", "Hoodie", "Winter Jacket", "Everything you own"]  
+    }; 
+    let myOutfit = 0; 
+    if (temp >= 80) myOutfit = outfits.hot; 
+    if (temp >= 65 && temp < 80) myOutfit = outfits.warm;
+    if (temp >= 45 && temp < 64) myOutfit = outfits.chilly;
+    if (temp >= 25 && temp < 44) myOutfit = outfits.cold;
+    if (temp < 25) myOutfit = outfits.chilly;
+
+    // return myOutfit; 
+    for (i = 0; i < myOutfit.length; i++){
+        console.log(myOutfit[i]);
+    }
+}
+
+
 function getWeather(coordinates) {
     let lat = coordinates[1];
     let lon = coordinates[0];
     let url = `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${apiKey}/${lat},${lon}`;
     get(url).then(function(response) {
         let apparentTemp = response.currently.apparentTemperature;
+        para.innerHTML = `Feels like ${apparentTemp} degrees Farenheit in ${zipCode}.`;
+        // printOutfit(apparentTemp);
     });
 }
 
@@ -55,32 +79,7 @@ function getIcon(zip) {
         });
 }
 
-function printOutfit (temp) { 
-    var outfits = {
-        hot:["T-shirt","Shorts"],
-        warm:["T-shirt","Jeans"],
-        chilly:["T-shirt","Jeans", "Sweater"],
-        cold:["T-shirt","Pants", "Coat" ], 
-        wintry:["Long Sleeves", "Pants", "Hoodie", "Winter Jacket", "Everything you own"]  
-    }; 
-    let myOutfit = 0; 
-    if (temp >= 80) myOutfit = outfits.hot; 
-    if (temp >= 65 && temp < 80) myOutfit = outfits.warm;
-    if (temp >= 45 && temp < 64) myOutfit = outfits.chilly;
-    if (temp >= 25 && temp < 44) myOutfit = outfits.cold;
-    if (temp < 25) myOutfit = outfits.chilly;
-
-    // return myOutfit; 
-    for (i = 0; i < myOutfit.length; i++){
-        console.log(myOutfit[i]);
-    }
-}
-
-console.log(printOutfit(79)); 
-
-console.log(printOutfit(65));
-
-
-
-
-
+// ! commenting out so I don't constantly call these APIs
+// getClothes();
+convertZipToCoordinates(zipCode)
+// getIcon(zipCode)

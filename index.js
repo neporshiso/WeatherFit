@@ -1,8 +1,5 @@
 // ? So far using three APIs.  ZipCode to Lat/Lon API.  DarkSky for weather data.  Open Weather for weather icon.
-// Todo add an event listener to form submit
-
-const apiKey = "1387466109e308e8de851d6f09a87c39";
-const zipCode = "64111";
+// Today's Weather Box:  Format Degrees.  Populate City, State as well.   Do Tomorrows weather.
 
 function get(url) {
     return fetch(url)
@@ -48,21 +45,21 @@ function printOutfit (temp) {
     }
 }
 
-
 function getWeather(coordinates) {
+    let tempHtml = document.getElementById("feelsLike")
     let lat = coordinates[1];
     let lon = coordinates[0];
-    let url = `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${apiKey}/${lat},${lon}`;
+    let url = `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/1387466109e308e8de851d6f09a87c39/${lat},${lon}`;
     get(url).then(function(response) {
         let apparentTemp = response.currently.apparentTemperature;
-        para.innerHTML = `Feels like ${apparentTemp} degrees Farenheit in ${zipCode}.`;
+        tempHtml.innerHTML = apparentTemp
         // printOutfit(apparentTemp);
     });
 }
 
 function getIcon(zip) {
     let u = `https://api.openweathermap.org/data/2.5/weather?zip=${zip}&APPID=c7d69379e4f97e2b0e42695dddb0ad27`;
-    const iconImg = document.getElementById("icon");
+    const iconImg = document.getElementById("weatherIcon");
     get(u)
         .then(response => response)
         .then(function(data) {
@@ -79,8 +76,7 @@ function getIcon(zip) {
         });
 }
 
-// ! commenting out so I don't constantly call these APIs
-
-// getClothes();
-convertZipToCoordinates(zipCode)
-// getIcon(zipCode)
+(function(){
+    convertZipToCoordinates(30342)
+    getIcon(30342)
+})();

@@ -1,4 +1,5 @@
 // ? So far using three APIs.  ZipCode to Lat/Lon API.  DarkSky for weather data.  Open Weather for weather icon.
+// Todo add an event listener to form submit
 
 const apiKey = "1387466109e308e8de851d6f09a87c39";
 const zipCode = "64111";
@@ -8,6 +9,14 @@ function get(url) {
         .then(response => response.json())
         .then(data => data);
 }
+
+// When the zip code form is submitted, grab the zip code, convert it to coordinates and get the weather data
+zipcodeForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // default behavior is to reload the page
+    let zipcodeValue = document.getElementById("zipcodeInput").value;
+    convertZipToCoordinates(zipcodeValue)
+    getIcon(zipcodeValue)
+})  
 
 function convertZipToCoordinates(zip) {
     get(
@@ -19,13 +28,11 @@ function convertZipToCoordinates(zip) {
 }
 
 function getWeather(coordinates) {
-    const para = document.getElementById("p");
     let lat = coordinates[1];
     let lon = coordinates[0];
     let url = `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${apiKey}/${lat},${lon}`;
     get(url).then(function(response) {
         let apparentTemp = response.currently.apparentTemperature;
-        para.innerHTML = `Feels like ${apparentTemp} degrees Farenheit in ${zipCode}.`;
     });
 }
 
@@ -48,11 +55,6 @@ function getIcon(zip) {
         });
 }
 
-// ! commenting out so I don't constantly call these APIs
-getClothes();
-// convertZipToCoordinates(zipCode)
-// getIcon(zipCode)
-
 function printOutfit (temp) { 
     var outfits = {
         hot:["T-shirt","Shorts"],
@@ -73,7 +75,6 @@ function printOutfit (temp) {
         console.log(myOutfit[i]);
     }
 }
-
 
 console.log(printOutfit(79)); 
 

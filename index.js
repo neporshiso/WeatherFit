@@ -77,8 +77,6 @@ function printOutfit (temp) {
 
 console.log(printOutfit(79)); 
 
-console.log(printOutfit(65));
-
 
 
 

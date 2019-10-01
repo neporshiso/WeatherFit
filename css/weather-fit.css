@@ -47,3 +47,8 @@ body {
 .menu {
     margin: auto;
 }
+
+.submit-box {
+    display: flex;
+    flex-direction: row;
+}

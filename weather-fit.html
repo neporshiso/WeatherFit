@@ -32,11 +32,15 @@
                     </a>
                 </div>
             </div>
-            <div class="field zipcode">
-                <div class="control">
-                    <input class="input is-danger" type="text" placeholder="Enter zipcode">
+            <form id="zipcodeForm">
+                <div class="field zipcode">
+                    <div class="control submit-box">
+                        <input class="input is-danger" type="text" placeholder="Enter zipcode" id="zipcodeInput">
+                        <button class="button is-danger is-outlined">Submit</button>
+                    </div>
                 </div>
-            </div>
+            </form>
+
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
@@ -56,7 +60,8 @@
                 <p> Today's Weather</p>
             </div>
             <div class="message-body">
-                WEATHER GOES HERE
+                <p id="feelsLike">&nbsp;</p>
+                <p id="weatherIcon">&nbsp;</p>
             </div>
         </article>
         <article class="message is-warning profile-weather">
@@ -112,4 +117,5 @@
     
 </body>
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<script src="index.js"></script>
 </html>

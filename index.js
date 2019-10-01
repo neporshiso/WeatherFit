@@ -80,6 +80,7 @@ function getIcon(zip) {
 }
 
 // ! commenting out so I don't constantly call these APIs
+
 // getClothes();
 convertZipToCoordinates(zipCode)
 // getIcon(zipCode)

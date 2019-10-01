@@ -55,66 +55,68 @@
             </div>
         </nav>
     </header>
-        <article class="message is-danger profile-weather">
-            <div class="message-header">
-                <p> Today's Weather</p>
+    <div class="weather-container">
+        <div class="today-container">
+            <article class="message is-danger">
+                <div class="weather-wrapper">
+                    <div class="message-header">
+                        <p> Today's Weather</p>
+                    </div>
+                    <div class="message-body weather-information">
+                        <ul>
+                            <img id="weatherIcon"></img>
+                            <li>Feels like: &nbsp;</li><p id="feelsLike">&nbsp;</p>
+                            <li id="precipitationCount">Placeholder</li>
+                            <li id="pollenCount">Placeholder</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            <div class="clothing-today">
+                <figure class="image is-128x128">
+                    <img id="todayIcon1" class="is-rounded" src="images/tshirt.png">
+                </figure>
+                <figure class="image is-128x128">
+                    <img id="todayIcon2" class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                </figure>
+                <figure class="image is-128x128">
+                    <img id="todayIcon3" class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                </figure>
+                <figure id="todayIcon4" class="image is-128x128">
+                    <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                </figure>
             </div>
-            <div class="message-body">
-                <p id="feelsLike">&nbsp;</p>
-                <img id="weatherIcon">&nbsp;</img>
-            </div>
-        </article>
-        <article class="message is-warning profile-weather">
-            <div class="tomorrow-weather">
+        </div>
+    <div class="tomorrow-container">
+        <article class="message is-warning">
+            <div class="weather-wrapper">
                 <div class="message-header">
                     <p>Tomorrow's Weather</p>
                 </div>
-                <div class="message-body">
-                    WEATHER GOES HERE
+                <div class="message-body weather-information">
+                   <ul>
+                       <img id="tomorrowWeatherIcon"/>
+                       <li>Feels Like: &nbsp;</li><li id="tomorrowFeelsLike"></li>
+                   </ul>
                 </div>    
             </div>
         </article>
-        <div class="clothing-today">
-            <figure class="image is-128x128">
-                <img class="is-rounded" src="images/tshirt.png">
-            </figure>
-            <figure class="image is-128x128">
-                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-            </figure>
-            <figure class="image is-128x128">
-                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-            </figure>
-            <figure class="image is-128x128">
-                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-            </figure>
-            <figure class="image is-128x128">
-                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-            </figure>
-            <figure class="image is-128x128">
-                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-            </figure>
-        </div>
         <div class="clothing-tomorrow">
             <figure class="image is-128x128">
-                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                <img id="tomorrowIcon1" class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
             </figure>
             <figure class="image is-128x128">
-                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                <img id="tomorrowIcon2" class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
             </figure>
             <figure class="image is-128x128">
-                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                <img id="tomorrowIcon3" class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
             </figure>
             <figure class="image is-128x128">
-                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-            </figure>
-            <figure class="image is-128x128">
-                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-            </figure>
-            <figure class="image is-128x128">
-                <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                <img id="tomorrowIcon4" class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
             </figure>
         </div>
-    
+    </div>
+    </div>
 </body>
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script src="index.js"></script>

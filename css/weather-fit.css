@@ -1,7 +1,11 @@
+html {
+    background-repeat: no-repeat;
+}
 
 body {
     margin: 24px;
     padding: 0px;
+    
 }
 
 .home-image {
@@ -14,37 +18,50 @@ body {
     justify-content: left;
 }
 
-.weather {
-    font-size: 24px;
-}
-
-.profile-weather {
-    display: flex;
-    width: 500px;
-    align-content: space-between;
-}
-
-.clothing-today {
-    display: flex;
-    flex-wrap: row wrap;
-}
-
-.clothing-tomorrow {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-top: -125px;
-}
-
 .zipcode {
     margin: 0 auto;
 }
 
 .menu {
-    margin: auto;
+    display: flex;
+    justify-content: left;
 }
 
 .submit-box {
     display: flex;
     flex-direction: row;
 }
+
+.weather-wrapper {
+    position: relative;
+    float: left;
+}
+
+.weather-information {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+
+}
+
+.weather-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+/* .today-container {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 20px;
+}
+
+.tomorrow-container {
+    position: relative;
+    float: right;
+    margin: auto;
+    padding: 20px;
+} */

@@ -74,10 +74,10 @@ function getWeather(coordinates) {
         let tmrwRainChanceValue = response.daily.data[0].precipProbability * 100
         
         // Populate DOM with weather data
-        tempHtml.innerHTML = `${apparentTemp}&#176F`
-        tmrTempHigh.innerHTML = `${tmrwTempHighValue}&#176F`
-        tmrTempLow.innerHTML = `${tmrwTempLowValue}&#176F`
-        tmrRain.innerHTML = `${tmrwRainChanceValue}&#37;`
+        tempHtml.innerHTML = `${Math.round(apparentTemp)}&#176F`
+        tmrTempHigh.innerHTML = `${Math.round(tmrwTempHighValue)}&#176F`
+        tmrTempLow.innerHTML = `${Math.round(tmrwTempLowValue)}&#176F`
+        tmrRain.innerHTML = `${Math.round(tmrwRainChanceValue)}&#37;`
 
         // Call printOutfit 
         // printOutfit(apparentTemp);

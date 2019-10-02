@@ -1,6 +1,7 @@
 body {
     margin: 0px;
     padding: 0px;
+    font-family: 'Libre Franklin', sans-serif;
   
 }
 
@@ -25,11 +26,15 @@ body {
 }
 
 .message-header {
-    background-color:black; 
+    background-color:black;
+    justify-content:center;  
+    font-family:'Libre Franklin';
+    font-size: 1.8rem; 
 }
 
 .button {
     border-color:black;
+    color:black; 
 }
 
 .input {
@@ -47,11 +52,6 @@ body {
 
 .zipcode {
     margin: 0 auto;
-}
-
-.menu {
-    display: flex;
-    justify-content: left;
 }
 
 .submit-box {

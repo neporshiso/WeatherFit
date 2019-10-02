@@ -26,23 +26,32 @@ body {
 }
 
 .message-header {
-    background-color:black;
+    background-color: hsla(0, 0%, 0%, 0.52);
     justify-content:center;  
     font-family:'Libre Franklin';
     font-size: 1.8rem; 
+    color: #f2f2f2;
+}
+
+.message {
+    background-color:transparent; 
 }
 
 .button {
     border-color:black;
-    color:black; 
+    color: #f2f2f2;
+    background-color: hsla(0, 0%, 0%, 0.52)
 }
 
 .input {
-    border-color:black; 
+    border-color:black;
+    background-color:#36363652; 
+    color: #f2f2f2;
+    
 }
 .home-image {
-    width: 75px;
-    height: 50px;
+    width: 125px;
+    height: 100px;
 }
 
 .navbar-brand {
@@ -70,3 +79,7 @@ body {
     align-self: center;
 }
 
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}

@@ -35,24 +35,31 @@ function convertZipToCoordinates(zip) {
 }
 
 function printOutfit (temp) { 
+    let clothesContainer= document.getElementById("contClothes");
+
     var outfits = { 
-        hot:["T-shirt","Shorts"],
-        warm:["T-shirt","Jeans"],
-        chilly:["T-shirt","Jeans", "Sweater"],
-        cold:["T-shirt","Pants", "Coat" ], 
+        hot:[ "images/pants.png","images/tshirt.png"],
+        warm:["./images/tshirt.png","Jeans"],
+        chilly:["./images/tshirt.png","Jeans", "Sweater"],
+        cold:["./images/tshirt.png","Pants", "Coat" ], 
         wintry:["Long Sleeves", "Pants", "Hoodie", "Winter Jacket", "Everything you own"]  
     }; 
     let myOutfit = 0; 
-    if (temp >= 80) myOutfit = outfits.hot; 
+    if (temp >= 80) myOutfit = outfits.hot;
     if (temp >= 65 && temp < 80) myOutfit = outfits.warm;
     if (temp >= 45 && temp < 64) myOutfit = outfits.chilly;
     if (temp >= 25 && temp < 44) myOutfit = outfits.cold;
-    if (temp < 25) myOutfit = outfits.chilly;
+    if (temp < 25) myOutfit = outfits.wintry;
 
-    // return myOutfit; 
-    for (i = 0; i < myOutfit.length; i++){
+        for (i = 0; i < myOutfit.length; i++) { 
+                newImg = document.createElement("img");
+                newImg.setAttribute("src", myOutfit[i]);
+                newImg.setAttribute("class", "image is-128x128 is-rounded")
+                clothesContainer.append(newImg);
+        }  
+    
         console.log(myOutfit[i]);
-    }
+        return myOutfit;
 }
 
 function getWeather(coordinates) {
@@ -80,7 +87,7 @@ function getWeather(coordinates) {
         tmrRain.innerHTML = `${tmrwRainChanceValue}&#37;`
 
         // Call printOutfit 
-        // printOutfit(apparentTemp);
+        printOutfit(apparentTemp);
     });
 }
 

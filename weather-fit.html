@@ -6,17 +6,18 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
         <link rel="stylesheet" href="css/weather-fit.css">
-        <title>WeatherFit</title>
+        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:700&display=swap" rel="stylesheet">
+        <title>WhetherFit</title>
     </head>
 
-    <div class="hero is-fullheight is-primary has-background">
-        <img alt="Image BG" class="hero-background is-transparent" src="images/nishant-dwivedi-8fKk8Nx4PoI-unsplash.jpg"/> 
+    <div class="hero is-fullheight is-dark has-background">
+        <img alt="Image BG" class="hero-background is-transparent" src="images/meagan-carsience-R6tmHpG0T7o-unsplash.jpg"/> 
         <body class="hero-body">
             <header class="hero-head">
                 <nav class="navbar" role="navigation">
                     <div class="navbar-brand">
                         <a class="logo" href="weather-fit.html">
-                            <img class="home-image" src="images/wf-icon.png"/>
+                            <img class="home-image" src="images/cropped-wf_icon.png"/>
                         </a>
                     </div>
                     <div class="navbar-end">
@@ -38,7 +39,7 @@
                 <div class="field zipcode">
                     <div class="control submit-box">
                         <input class="input" type="text" placeholder="Enter zipcode" id="zipcodeInput">
-                        <button type="submit" class="button is-danger is-outlined">Submit</button>
+                        <button type="submit" class="button is-outlined">Submit</button>
                     </div>
                 </div>
             </form>
@@ -47,10 +48,10 @@
                 <div class="today-container">
                     <article class="message">
                         <div class="weather-wrapper">
-                            <div class="message-header">
+                            <div class="message-header has-text-light">
                                 <p> Today's Weather</p>
                             </div>
-                            <div class="message-body weather-information">
+                            <div class="message-body weather-information has-text-light">
                                 <img id="weatherIcon"></img>
                                 <p>It currently feels like <span id="feelsLike"></span> </p>
                                 <p>in <span id="todayLocation"></span> </p>
@@ -78,10 +79,10 @@
                 <div class="tomorrow-container">
                     <article class="message">
                         <div class="weather-wrapper">
-                            <div class="message-header">
+                            <div class="message-header has-text-centered">
                                 <p>Tomorrow's Weather</p>
                             </div>
-                            <div class="message-body weather-information">
+                            <div class="message-body weather-information has-text-light">
                                 <p>Feels Like Temp High: <span id="tmrTempHigh"></span></p>
                                 <p>Feels Like Temp Low: <span id="tmrTempLow"></span> </p>
                                 <p>Precipitation Chance: <span id="tmrRainChance"></span> </p>

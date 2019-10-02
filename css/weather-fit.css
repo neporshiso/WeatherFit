@@ -1,10 +1,10 @@
 body {
-    margin: 24px;
+    margin: 0px;
     padding: 0px;
     
 }
 
-/* .hero.has-background{
+.hero.has-background{
     position: relative;
     overflow: hidden;
 }
@@ -17,7 +17,11 @@ body {
 }
 .hero-background.is-transparent {
       opacity: 0.3;
-} */
+}
+
+.hero-body {
+    padding: 0px; 
+}
 
 .home-image {
     width: 75px;

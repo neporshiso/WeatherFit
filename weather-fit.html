@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="css/weather-fit.css">
     <title>WeatherFit</title>
 </head>
-<!-- <div class="hero is-fullheight is-primary has-background"></div>
-        <img alt="Image BG" class="hero-background is-transparent" src="images/nishant-dwivedi-8fKk8Nx4PoI-unsplash.jpg"/> -->
-<body>
-    <header>
+<div class="hero is-fullheight is-primary has-background">
+    <img alt="Image BG" class="hero-background is-transparent" src="images/nishant-dwivedi-8fKk8Nx4PoI-unsplash.jpg"/> 
+<body class="hero-body">
+    <header class="hero-head">
         <nav class="navbar" role="navigation">
             <div class="navbar-brand">
                 <a class="logo" href="weather-fit.html">
@@ -34,22 +34,15 @@
                     </a>
                 </div>
             </div>
-            <form id="zipcodeForm">
-                <div class="field zipcode">
-                    <div class="control submit-box">
-                        <input class="input is-danger" type="text" placeholder="Enter zipcode" id="zipcodeInput">
-                        <button type="submit" class="button is-danger is-outlined">Submit</button>
-                    </div>
-                </div>
-            </form>
+           
 
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-danger">
+                        <a class="button">
                           <strong>Sign up</strong>
                         </a>
-                        <a class="button is-warning">
+                        <a class="button">
                           Log in
                         </a>
                     </div>
@@ -57,9 +50,17 @@
             </div>
         </nav>
     </header>
+    <form id="zipcodeForm">
+            <div class="field zipcode">
+                <div class="control submit-box">
+                    <input class="input is-danger" type="text" placeholder="Enter zipcode" id="zipcodeInput">
+                    <button type="submit" class="button is-danger is-outlined">Submit</button>
+                </div>
+            </div>
+        </form>
     <div class="weather-container">
         <div class="today-container">
-            <article class="message is-danger">
+            <article class="message">
                 <div class="weather-wrapper">
                     <div class="message-header">
                         <p> Today's Weather</p>
@@ -87,7 +88,7 @@
         </div>
     </div>
     <div class="tomorrow-container">
-        <article class="message is-warning">
+        <article class="message">
             <div class="weather-wrapper">
                 <div class="message-header">
                     <p>Tomorrow's Weather</p>
@@ -115,6 +116,16 @@
         </div>
     </div>
 </body>
+<div class="hero-foot">
+        <nav class="tabs is-boxed is-fullwidth">
+          <div class="container">
+            <ul>
+              <li class="is-active"><a>THIS IS THE FOOTER</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+</div>
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script src="index.js"></script>
 </html>

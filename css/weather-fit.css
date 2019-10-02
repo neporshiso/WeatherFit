@@ -1,10 +1,11 @@
 body {
-    margin: 24px;
+    margin: 0px;
     padding: 0px;
-    
+    font-family: 'Libre Franklin', sans-serif;
+  
 }
 
-/* .hero.has-background{
+.hero.has-background{
     position: relative;
     overflow: hidden;
 }
@@ -17,8 +18,28 @@ body {
 }
 .hero-background.is-transparent {
       opacity: 0.3;
-} */
+}
 
+
+.hero-body {
+    padding: 0px; 
+}
+
+.message-header {
+    background-color:black;
+    justify-content:center;  
+    font-family:'Libre Franklin';
+    font-size: 1.8rem; 
+}
+
+.button {
+    border-color:black;
+    color:black; 
+}
+
+.input {
+    border-color:black; 
+}
 .home-image {
     width: 75px;
     height: 50px;
@@ -33,46 +54,19 @@ body {
     margin: 0 auto;
 }
 
-.menu {
-    display: flex;
-    justify-content: left;
-}
-
 .submit-box {
     display: flex;
     flex-direction: row;
 }
 
-.weather-wrapper {
-    position: relative;
-    float: left;
+.hero {
+    align-items: stretch;
+    display: block;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
-.weather-information {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    line-height: 50px;
-    font-size: 24px;
-
+#weatherIcon {
+    align-self: center;
 }
 
-.weather-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-/* .today-container {
-    position: relative;
-    float: left;
-    margin: 0;
-    padding: 20px;
-}
-
-.tomorrow-container {
-    position: relative;
-    float: right;
-    margin: auto;
-    padding: 20px;
-} */

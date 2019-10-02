@@ -35,74 +35,92 @@
                 </nav>
             </header>
 
-            <form id="zipcodeForm">
-                <div class="field zipcode">
-                    <div class="control submit-box">
-                        <input class="input" type="text" placeholder="Enter zipcode" id="zipcodeInput">
-                        <button type="submit" class="button is-outlined">Submit</button>
+
+
+            <!-- Today's weather-->
+            <div class="container">
+                <div class="level">
+                    <div class="level-left">
+                        <form id="zipcodeForm">
+                            <div class="field zipcode">
+                                <div class="control submit-box">
+                                    <input class="input" type="text" placeholder="Enter zipcode" id="zipcodeInput">
+                                    <button type="submit" class="button is-danger is-outlined">Submit</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </form>
-          
-            <div class="weather-container">
-                <div class="today-container">
-                    <article class="message">
-                        <div class="weather-wrapper">
-                            <div class="message-header has-text-light">
-                                <p> Today's Weather</p>
-                            </div>
-                            <div class="message-body weather-information has-text-light">
-                                <img id="weatherIcon"></img>
-                                <p>It currently feels like <span id="feelsLike"></span> </p>
-                                <p>in <span id="todayLocation"></span> </p>
+                <div class="columns">
+                    <div class="column">
+                        <div class="weather-container">
+                            <div class="today-container">
+                                <article class="message">
+                                    <div class="weather-wrapper">
+                                        <div class="message-header">
+                                            <p> Today's Weather</p>
+                                        </div>
+                                        <div class="message-body weather-information">
+                                            <img id="weatherIcon"></img>
+                                            <p>It currently feels like <span id="feelsLike"></span> </p>
+                                            <p>in <span id="todayLocation"></span> </p>
+                                        </div>
+                                    </div>
+                                    <!-- might be a good idea to put figures within it's own div-->
+                                    <figure class="clothing-today">
+                                        <figure class="image is-128x128">
+                                            <img id="todayIcon1" class="is-rounded" src="images/tshirt.png">
+                                        </figure>
+                                        <figure class="image is-128x128">
+                                            <img id="todayIcon2" class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                                        </figure>
+                                        <figure class="image is-128x128">
+                                            <img id="todayIcon3" class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                                        </figure>
+                                        <figure id="todayIcon4" class="image is-128x128">
+                                            <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                                        </figure>      
+                                    </figure>
+                                </article>
                             </div>
                         </div>
-                    </article>
-                    <figure class="clothing-today">
-                        <figure class="image is-128x128">
-                            <img id="todayIcon1" class="is-rounded" src="images/tshirt.png">
-                        </figure>
-                        <figure class="image is-128x128">
-                            <img id="todayIcon2" class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-                        </figure>
-                        <figure class="image is-128x128">
-                            <img id="todayIcon3" class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-                        </figure>
-                        <figure id="todayIcon4" class="image is-128x128">
-                            <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-                        </figure>      
-                    </figure>
-                </div>
-            </div>
+                    </div>
 
-            <div class="weather-container">
-                <div class="tomorrow-container">
-                    <article class="message">
-                        <div class="weather-wrapper">
-                            <div class="message-header has-text-centered">
-                                <p>Tomorrow's Weather</p>
+                <!-- Tomorrow's weather -->
+                    <div class="column">
+                            <div class="weather-container">
+                                <div class="tomorrow-container">
+                                    <article class="message">
+                                        <div class="weather-wrapper">
+                                            <div class="message-header has-text-centered">
+                                                <p>Tomorrow's Weather</p>
+                                            </div>
+                                        <div class="message-body weather-information">
+                                                <p>Feels Like Temp High: <span id="tmrTempHigh"></span></p>
+                                                <p>Feels Like Temp Low: <span id="tmrTempLow"></span> </p>
+                                                <p>Precipitation Chance: <span id="tmrRainChance"></span> </p>
+                                        </div>       
+                                    </div>
+                            
+                                    <!-- might be a good idea to put figures within it's own div-->
+                                    <div class="clothing-tomorrow">
+                                        <figure class="image is-128x128">
+                                            <img id="tomorrowIcon1" class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                                        </figure>
+                                        <figure class="image is-128x128">
+                                            <img id="tomorrowIcon2" class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                                        </figure>
+                                        <figure class="image is-128x128">
+                                            <img id="tomorrowIcon3" class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                                        </figure>
+                                        <figure class="image is-128x128">
+                                            <img id="tomorrowIcon4" class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
+                                        </figure>
+                                    </div>
+                                </article>
                             </div>
-                            <div class="message-body weather-information has-text-light">
-                                <p>Feels Like Temp High: <span id="tmrTempHigh"></span></p>
-                                <p>Feels Like Temp Low: <span id="tmrTempLow"></span> </p>
-                                <p>Precipitation Chance: <span id="tmrRainChance"></span> </p>
-                            </div>    
                         </div>
-                    </article>
-                </div>
-                <div class="clothing-tomorrow">
-                    <figure class="image is-128x128">
-                        <img id="tomorrowIcon1" class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-                    </figure>
-                    <figure class="image is-128x128">
-                        <img id="tomorrowIcon2" class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-                    </figure>
-                    <figure class="image is-128x128">
-                        <img id="tomorrowIcon3" class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-                    </figure>
-                    <figure class="image is-128x128">
-                        <img id="tomorrowIcon4" class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png">
-                    </figure>
+                    </div>
                 </div>
             </div>
         </body>
@@ -116,7 +134,7 @@
                 </div>
             </nav>
         </div>
-        
+    </div>
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script src="index.js"></script>
 </html>

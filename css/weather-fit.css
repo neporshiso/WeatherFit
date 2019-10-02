@@ -20,6 +20,7 @@ body {
       opacity: 0.3;
 }
 
+
 .hero-body {
     padding: 0px; 
 }
@@ -58,40 +59,14 @@ body {
     flex-direction: row;
 }
 
-.weather-wrapper {
-    position: relative;
-    float: left;
-}
-
-.weather-information {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    line-height: 50px;
-    font-size: 24px;
-
-}
-
-.weather-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+.hero {
+    align-items: stretch;
+    display: block;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 #weatherIcon {
     align-self: center;
 }
 
-/* .today-container {
-    position: relative;
-    float: left;
-    margin: 0;
-    padding: 20px;
-}
-
-.tomorrow-container {
-    position: relative;
-    float: right;
-    margin: auto;
-    padding: 20px;
-} */

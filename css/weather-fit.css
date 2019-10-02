@@ -1,7 +1,7 @@
 body {
     margin: 0px;
     padding: 0px;
-    
+  
 }
 
 .hero.has-background{
@@ -23,10 +23,17 @@ body {
     padding: 0px; 
 }
 
-.message {
+.message-header {
     background-color:black; 
 }
 
+.button {
+    border-color:black;
+}
+
+.input {
+    border-color:black; 
+}
 .home-image {
     width: 75px;
     height: 50px;

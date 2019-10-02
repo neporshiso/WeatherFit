@@ -23,6 +23,10 @@ body {
     padding: 0px; 
 }
 
+.message {
+    background-color:black; 
+}
+
 .home-image {
     width: 75px;
     height: 50px;

@@ -34,14 +34,15 @@ function convertZipToCoordinates(zip) {
     });
 }
 
-function printOutfit (temp) { 
-    let clothesContainer= document.getElementById("contClothes");
+function printOutfit (temp, temp2) { 
+    let clothesToday= document.getElementById("todayClothes");
+    let clothesTomorrow = document.getElementById("tomorrowClothes");
 
     var outfits = { 
         hot:[ "images/pants.png","images/tshirt.png"],
-        warm:["./images/tshirt.png","Jeans"],
-        chilly:["./images/tshirt.png","Jeans", "Sweater"],
-        cold:["./images/tshirt.png","Pants", "Coat" ], 
+        warm:["images/tshirt.png","images/scarf.png", "images/dress.png"],
+        chilly:["images/tshirt.png","Jeans", "Sweater"],
+        cold:["images/tshirt.png","Pants", "Coat" ], 
         wintry:["Long Sleeves", "Pants", "Hoodie", "Winter Jacket", "Everything you own"]  
     }; 
     let myOutfit = 0; 
@@ -52,13 +53,25 @@ function printOutfit (temp) {
     if (temp < 25) myOutfit = outfits.wintry;
 
         for (i = 0; i < myOutfit.length; i++) { 
-                newImg = document.createElement("img");
-                newImg.setAttribute("src", myOutfit[i]);
-                newImg.setAttribute("class", "image is-128x128 is-rounded")
-                clothesContainer.append(newImg);
-        }  
-    
-        console.log(myOutfit[i]);
+            newImg = document.createElement("img");
+            newImg.setAttribute("src", myOutfit[i]);
+            newImg.setAttribute("class", "image is-128x128");
+            clothesToday.append(newImg);
+        }
+    let myTomorrowOutfit = 0; 
+    if (temp2 >= 80) myTomorrowOutfit = outfits.hot;
+    if (temp2 >= 65 && temp2 < 80) myTomorrowOutfit = outfits.warm;
+    if (temp2 >= 45 && temp2 < 64) myTomorrowOutfit = outfits.chilly;
+    if (temp2 >= 25 && temp2 < 44) myTomorrowOutfit = outfits.cold;
+    if (temp2 < 25) myTomorrowOutfit = outfits.wintry;    
+
+        for (j = 0; j < myTomorrowOutfit.length; j++) { 
+            newImg2 = document.createElement("img");
+            newImg2.setAttribute("src", myTomorrowOutfit[j]);
+            newImg2.setAttribute("class", "image is-128x128");
+            clothesTomorrow.append(newImg2);
+        }
+
         return myOutfit;
 }
 
@@ -87,7 +100,7 @@ function getWeather(coordinates) {
         tmrRain.innerHTML = `${Math.round(tmrwRainChanceValue)}&#37;`
 
         // Call printOutfit 
-        printOutfit(apparentTemp);
+        printOutfit(apparentTemp, tmrwTempLowValue);
     });
 }
 

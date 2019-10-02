@@ -50,7 +50,7 @@ body {
 
 .weather-information {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     text-align: center;
     line-height: 50px;
     font-size: 24px;
@@ -63,6 +63,9 @@ body {
     justify-content: space-around;
 }
 
+#weatherIcon {
+    align-self: center;
+}
 /* .today-container {
     position: relative;
     float: left;

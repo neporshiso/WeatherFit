@@ -31,7 +31,7 @@ body {
     object-fit: fill;
     object-position: center center;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 .hero-background.is-transparent {
@@ -40,6 +40,10 @@ body {
 
 .hero-body {
     padding: 0px; 
+}
+
+.backgroundImage {
+    height: 100%;
 }
 
 .message-header {

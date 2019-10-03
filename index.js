@@ -60,7 +60,7 @@ function printOutfit (temp, temp2) {
         for (i = 0; i < myOutfit.length; i++) { 
             newImg = document.createElement("img");
             newImg.setAttribute("src", myOutfit[i]);
-            newImg.setAttribute("class", "image is-128x128");
+            newImg.setAttribute("class", "round image is-128x128");
             clothesToday.append(newImg);
         }
 
@@ -74,7 +74,7 @@ function printOutfit (temp, temp2) {
         for (j = 0; j < myTomorrowOutfit.length; j++) { 
             newImg2 = document.createElement("img");
             newImg2.setAttribute("src", myTomorrowOutfit[j]);
-            newImg2.setAttribute("class", "image is-128x128");
+            newImg2.setAttribute("class", "round image is-128x128");
             clothesTomorrow.append(newImg2);
         }
         

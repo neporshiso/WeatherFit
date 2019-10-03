@@ -44,11 +44,11 @@ function printOutfit (temp, temp2) {
     let clothesTomorrow = document.getElementById("tomorrowClothes");
 
     var outfits = { 
-        hot:[ "images/shorts.png","images/tshirt.png", "images/blouse.png", "images/dress.png"],
-        warm:["images/tshirt.png","images/shorts.png", "images/dress.png", "images/pants.png", "images/blouse.png"],
-        chilly:["images/tshirt.png","images/pants.png", "images/sweatshirt.png"],
-        cold:["images/tshirt.png","images/pants.png", "images/coat.png", "images/scarf.png"], 
-        wintry:["images/tshirt.png", "images/pants.png", "Hoodie", "Winter Jacket", "Everything you own"]  
+        hot:["images/shorts.png","images/whitetshirt.png", "images/dress.png"],
+        warm:["images/greytshirt.png","images/jeans.png", "images/dress.png", "images/sweatshirt.png", "images/shorts.png"],
+        chilly:["images/whitetshirt.png","images/sweatpants.png", "images/sweatshirt.png", "images/blackjacket.png", "images/dress.png", "images/jeans.png"],
+        cold:["images/greytshirt.png","images/jeans.png", "images/coat.png", "images/scarf.png", "images/blackjacket.png", "images/coat.png"], 
+        wintry:["images/freezing.png"] 
     }; 
     let myOutfit = 0; 
     if (temp >= 80) myOutfit = outfits.hot;

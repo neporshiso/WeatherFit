@@ -17,9 +17,11 @@ function get(url) {
 zipcodeForm.addEventListener("submit", function(event) {
     event.preventDefault(); 
     let zipcodeValue = document.getElementById("zipcodeInput").value;
+    
     convertZipToCoordinates(zipcodeValue)
     getIcon(zipcodeValue)
 })  
+
 
 function convertZipToCoordinates(zip) {
     const location = document.getElementById("todayLocation");
@@ -58,6 +60,7 @@ function printOutfit (temp, temp2) {
             newImg.setAttribute("class", "image is-128x128");
             clothesToday.append(newImg);
         }
+
     let myTomorrowOutfit = 0; 
     if (temp2 >= 80) myTomorrowOutfit = outfits.hot;
     if (temp2 >= 65 && temp2 < 80) myTomorrowOutfit = outfits.warm;
@@ -71,7 +74,7 @@ function printOutfit (temp, temp2) {
             newImg2.setAttribute("class", "image is-128x128");
             clothesTomorrow.append(newImg2);
         }
-
+        
         return myOutfit;
 }
 

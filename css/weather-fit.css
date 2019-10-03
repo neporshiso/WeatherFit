@@ -5,6 +5,13 @@ body {
   
 }
 
+.round {
+    border-radius:50%; 
+    border-style:solid;
+    border-color:black; 
+
+}
+
 .hero.has-background{
     position: relative;
     overflow: hidden;

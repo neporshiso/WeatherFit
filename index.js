@@ -16,8 +16,11 @@ function get(url) {
 // When the zip code form is submitted, grab the zip code, convert it to coordinates and get the weather data and icon
 zipcodeForm.addEventListener("submit", function(event) {
     event.preventDefault(); 
+    let clothesToday= document.getElementById("todayClothes");
+    let clothesTomorrow = document.getElementById("tomorrowClothes");
+    clothesTomorrow.innerHTML = "";
+    clothesToday.innerHTML = "";
     let zipcodeValue = document.getElementById("zipcodeInput").value;
-    
     convertZipToCoordinates(zipcodeValue)
     getIcon(zipcodeValue)
 })  
@@ -41,11 +44,11 @@ function printOutfit (temp, temp2) {
     let clothesTomorrow = document.getElementById("tomorrowClothes");
 
     var outfits = { 
-        hot:[ "images/pants.png","images/tshirt.png"],
-        warm:["images/tshirt.png","images/scarf.png", "images/dress.png"],
-        chilly:["images/tshirt.png","Jeans", "Sweater"],
-        cold:["images/tshirt.png","Pants", "Coat" ], 
-        wintry:["Long Sleeves", "Pants", "Hoodie", "Winter Jacket", "Everything you own"]  
+        hot:[ "images/shorts.png","images/tshirt.png", "images/blouse.png", "images/dress.png"],
+        warm:["images/tshirt.png","images/shorts.png", "images/dress.png", "images/pants.png", "images/blouse.png"],
+        chilly:["images/tshirt.png","images/pants.png", "images/sweatshirt.png"],
+        cold:["images/tshirt.png","images/pants.png", "images/coat.png", "images/scarf.png"], 
+        wintry:["images/tshirt.png", "images/pants.png", "Hoodie", "Winter Jacket", "Everything you own"]  
     }; 
     let myOutfit = 0; 
     if (temp >= 80) myOutfit = outfits.hot;
@@ -57,7 +60,7 @@ function printOutfit (temp, temp2) {
         for (i = 0; i < myOutfit.length; i++) { 
             newImg = document.createElement("img");
             newImg.setAttribute("src", myOutfit[i]);
-            newImg.setAttribute("class", "image is-128x128");
+            newImg.setAttribute("class", "round image is-128x128");
             clothesToday.append(newImg);
         }
 
@@ -71,7 +74,7 @@ function printOutfit (temp, temp2) {
         for (j = 0; j < myTomorrowOutfit.length; j++) { 
             newImg2 = document.createElement("img");
             newImg2.setAttribute("src", myTomorrowOutfit[j]);
-            newImg2.setAttribute("class", "image is-128x128");
+            newImg2.setAttribute("class", "round image is-128x128");
             clothesTomorrow.append(newImg2);
         }
         

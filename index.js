@@ -135,3 +135,26 @@ function getIcon(zip) {
     convertZipToCoordinates(30342)
     getIcon(30342)
 })();
+
+
+// const asosImg = document.getElementById("asos"); 
+
+// function getClothing(category) {
+//     fetch(`https://brianiswu-unofficial-asos-com-v1.p.rapidapi.com/product/search/v1/?q=${category}&sort=freshness&offset=0&limit=100&sizeschema=EU&currency=EUR&store=1&lang=en-GB&channel=mobile-app`, {
+// 	"method": "GET",
+// 	"headers": {
+// 		"x-rapidapi-host": "brianiswu-unofficial-asos-com-v1.p.rapidapi.com",
+// 		"x-rapidapi-key": "cc93a48657msh6d9be9a2c9ed55bp1958d4jsn0d10a2143b76"
+// 	}
+// })
+// .then(response => response.json())
+
+// .then(data => asosImg.setAttribute("src",data.products[0].images[0].url)) 
+
+// .catch(err => {
+// 	console.log(err);
+// });
+
+// };
+
+// getClothing('shirt'); 

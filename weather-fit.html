@@ -9,35 +9,37 @@
         <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:700&display=swap" rel="stylesheet">
         <title>WhetherFit</title>
     </head>
+    <body class="Site">
+        <!-- section has hero-head and hero-body -->
+        <section class="hero is-fullheight is-dark Site-content">
+            <img alt="Image BG" class="hero-background is-transparent" id="backgroundImage" src="images/meagan-carsience-R6tmHpG0T7o-unsplash.jpg"/> 
 
-    <div class="hero is-fullheight is-dark has-background">
-        <img alt="Image BG" class="hero-background is-transparent" src="images/meagan-carsience-R6tmHpG0T7o-unsplash.jpg"/> 
-        <body class="hero-body">
-            <header class="hero-head">
-                <nav class="navbar" role="navigation">
-                    <div class="navbar-brand">
-                        <a class="logo" href="weather-fit.html">
-                            <img class="home-image" src="images/cropped-wf_icon.png"/>
-                        </a>
-                    </div>
-                    <div class="navbar-end">
-                        <div class="navbar-item">
-                            <div class="buttons">
-                                <a class="button is-outlined">
-                                <strong>Sign up</strong>
-                                </a>
-                                <a class="button">
-                                    <strong>Login</strong>
-                                </a>
+            <div class="hero-head">
+                <header class="navbar">
+                    <div class="container" role="navigation">
+                        <div class="navbar-brand">
+                            <a class="logo" href="weather-fit.html">
+                                <img class="home-image" src="images/cropped-wf_icon.png"/>
+                            </a>
+                        </div>
+                        <div class="navbar-end">
+                            <div class="navbar-item">
+                                <div class="buttons">
+                                    <a class="button is-outlined">
+                                    <strong>Sign up</strong>
+                                    </a>
+                                    <a class="button">
+                                        <strong>Login</strong>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </nav>
-            </header>
+                </header>
+            </div>
 
-
-            <!-- Today's weather-->
-            <div class="container">
+            <!-- zipcode Form-->
+            <div class="container margin-top-bottom">
                 <div class="level">
                     <div class="level-left">
                         <form id="zipcodeForm">
@@ -50,31 +52,35 @@
                         </form>
                     </div>
                 </div>
-                <div class="columns">
-                    <div class="column">
-                        <div class="weather-container">
-                            <div class="today-container">
-                                <article class="message">
-                                    <div class="weather-wrapper">
-                                        <div class="message-header">
-                                            <p> Today's Weather</p>
+            </div>
+
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns">
+                        <div class="column">
+                            <div class="weather-container">
+                                <div class="today-container">
+                                    <article class="message">
+                                        <div class="weather-wrapper">
+                                            <div class="message-header">
+                                                <p> Today's Weather</p>
+                                            </div>
+                                            <div class="message-body weather-information has-text-light">
+                                                <img id="weatherIcon"></img>
+                                                <p>It currently feels like <span id="feelsLike"></span> </p>
+                                                <p>in <span id="todayLocation"></span> </p>
+                                            </div>
                                         </div>
-                                        <div class="message-body weather-information has-text-light">
-                                            <img id="weatherIcon"></img>
-                                            <p>It currently feels like <span id="feelsLike"></span> </p>
-                                            <p>in <span id="todayLocation"></span> </p>
+                                        <!-- clothes images from js go here -->
+                                        <div class="container flex-row" id="todayClothes">
                                         </div>
-                                    </div>
-                                    <!-- clothes images from js go here -->
-                                    <div class="container flex-row" id="todayClothes">
-                                    </div>
-                                </article>
+                                    </article>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
                 <!-- Tomorrow's weather -->
-                    <div class="column">
+                        <div class="column">
                             <div class="weather-container">
                                 <div class="tomorrow-container">
                                     <article class="message">
@@ -96,19 +102,23 @@
                                 </article>
                             </div>
                         </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </body>
+        </section>
 
-        <footer class="container hero-foot">
-            <nav class="tabs is-boxed is-fullwidth">
+        <!-- Footer has to be outside of the main content for sticky footer to work -->
+        <div class="hero-foot">
+            <nav class="tabs is-boxed">
+                <div class="container">
                     <ul>
-                        <li><a>THIS IS THE FOOTER</a></li>
+                        <li><a href="https://darksky.net/poweredby/">“Powered by Dark Sky”</a></li>
                     </ul>
+                </div>
             </nav>
-        </footer>
-    </div>
+        </div>
+    </body>
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script src="index.js"></script>
 </html>

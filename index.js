@@ -6,6 +6,16 @@
 4. [In Progress]: Unofficial ASOS for Clothing
 
 */
+function getDate() {
+    var currentDate = new Date()
+    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+    let todayDate = document.getElementById("currentDate");
+    todayDate.innerHTML = new Intl.DateTimeFormat('en-US', options).format(currentDate);
+}
+    
+
+
 
 function get(url) {
     return fetch(url)
@@ -134,6 +144,7 @@ function getIcon(zip) {
 (function(){
     convertZipToCoordinates(30342)
     getIcon(30342)
+    getDate()
 })();
 
 

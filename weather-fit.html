@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:700&display=swap" rel="stylesheet">
         <title>WhetherFit</title>
     </head>
-    <body class="Site">
+    <body class="Site" >
         <!-- section has hero-head and hero-body -->
         <section class="hero is-fullheight is-dark Site-content">
             <img alt="Image BG" class="hero-background is-transparent" id="backgroundImage" src="images/nishant-dwivedi-8fKk8Nx4PoI-unsplash.jpg"/> 
@@ -45,10 +45,16 @@
                             <div class="field zipcode">
                                 <div class="control submit-box">
                                     <input class="input" type="text" placeholder="Enter zipcode" id="zipcodeInput">
-                                    <button type="submit" class="button is-outlined">Submit</button>
+                                    <button type="submit" class="button is-outlined">Dress Me</button>
                                 </div>
                             </div>
                         </form>
+                    </div>
+                    <div class="level-item">
+                        <p>Dress me for <span id="todayLocation"></span></p>
+                    </div>
+                    <div class="level-right">
+                        <p>Placeholder Right</p>
                     </div>
                 </div>
             </div>
@@ -62,15 +68,17 @@
                                     <article class="message">
                                         <div class="weather-wrapper">
                                             <div class="message-header">
-                                                <p> Today's Weather</p>
+                                                <p>Today</p>
                                             </div>
                                             <div class="message-body weather-information has-text-light">
                                                 <img id="weatherIcon"></img>
                                                 <p>It currently feels like <span id="feelsLike"></span> </p>
-                                                <p>in <span id="todayLocation"></span> </p>
                                             </div>
                                         </div>
                                         <!-- clothes images from js go here -->
+                                        <div class="message-body weather-information has-text-light">
+                                            <p>Based on todays weather we recommend...</p>
+                                        </div>
                                         <div class="container flex-row" id="todayClothes">
                                         </div>
                                     </article>
@@ -93,10 +101,11 @@
                                                 <p>Precipitation Chance: <span id="tmrRainChance"></span> </p>
                                         </div>       
                                     </div>
-                            
+                                    <div class="message-body weather-information has-text-light">
+                                        <p>Based on todays weather we recommend...</p>
+                                    </div>
                                     <!-- might be a good idea to put figures within it's own div-->
                                     <div class="container flex-row" id="tomorrowClothes">
-                                        
                                     </div>
                                 </article>
                             </div>

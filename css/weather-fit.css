@@ -72,6 +72,10 @@ body {
     background-color:transparent; 
 }
 
+.message-body {
+    border-style: none;
+}
+
 .button {
     border-color:black;
     color: #f2f2f2;
@@ -119,4 +123,8 @@ body {
     display: flex;
     flex-flow: row wrap;
     background-color:transparent;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 3rem;
+    padding: 1rem;
 }

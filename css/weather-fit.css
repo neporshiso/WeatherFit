@@ -178,4 +178,7 @@ body {
     color: darkgray;
   }
 
+  .input::placeholder {
+      color: #ffff;
+  }
   

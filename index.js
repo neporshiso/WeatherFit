@@ -99,9 +99,10 @@ function printOutfit(temp, temp2, todayPrecip, tmrwPrecip) {
             "images/coat.png",
             "images/scarf.png",
             "images/blackjacket.png",
-            "images/coat.png"
         ],
-        wintry: ["images/freezing.png"]
+        wintry: [
+            "images/freezing.png"
+        ]
     };
 
     let myOutfit = 0;

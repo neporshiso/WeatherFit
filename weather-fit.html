@@ -20,6 +20,7 @@
                             <a class="logo" href="weather-fit.html">
                                 <img class="home-image" src="images/WhetherFitLogoCircle.png"/>
                             </a>
+                            <p class="current-date" id=currentDate></p>
                         </div>
                         <div class="navbar-end">
                             <div class="navbar-item">
@@ -45,16 +46,16 @@
                             <div class="field zipcode">
                                 <div class="control submit-box">
                                     <input class="input" type="text" placeholder="Enter zipcode" id="zipcodeInput">
-                                    <button type="submit" class="button is-outlined">Dress Me</button>
+                                    <button type="submit" class="button is-outlined">Dress Me For...</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                     <div class="level-item">
-                        <p>Dress me for <span id="todayLocation"></span></p>
+                        <p>&nbsp;<span class="today-location" id="todayLocation"></span></p>
                     </div>
                     <div class="level-right">
-                        <p>Placeholder Right</p>
+                        <p>&nbsp;</p>
                     </div>
                 </div>
             </div>
@@ -127,6 +128,7 @@
             </nav>
         </div>
     </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 <script src="index.js"></script>
 </html>

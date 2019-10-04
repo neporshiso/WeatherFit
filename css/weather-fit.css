@@ -128,3 +128,15 @@ body {
     margin: 3rem;
     padding: 1rem;
 }
+
+.current-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    position: relative;
+}
+
+.today-location {
+    font-size: 50px;
+}

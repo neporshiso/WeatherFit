@@ -27,7 +27,7 @@ Written with:
 ## Authors
 
 * Nep Orshiso [Github Link](https://github.com/neporshiso)
-* Felipe Dunbar 
+* Felipe Dunbar [Github Link](https://github.com/FelipeD97)
 * Kate Gordon [Github Link](https://github.com/kate-gordon)
 
 ## Credit 

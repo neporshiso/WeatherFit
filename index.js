@@ -74,7 +74,7 @@ function printOutfit (temp, temp2, todayPrecip, tmrwPrecip) {
         hot:["images/shorts.png","images/whitetshirt.png", "images/dress.png"],
         warm:["images/greytshirt.png","images/jeans.png", "images/dress.png", "images/sweatshirt.png", "images/shorts.png"],
         chilly:["images/whitetshirt.png","images/sweatpants.png", "images/sweatshirt.png", "images/blackjacket.png", "images/dress.png", "images/jeans.png"],
-        cold:["images/greytshirt.png","images/jeans.png", "images/coat.png", "images/scarf.png", "images/blackjacket.png", "images/coat.png"], 
+        cold:["images/greytshirt.png","images/jeans.png", "images/coat.png", "images/scarf.png", "images/blackjacket.png", ], 
         wintry:["images/freezing.png"] 
     }; 
 

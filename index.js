@@ -23,6 +23,23 @@ function get(url) {
         .then(data => data);
 }
 
+
+modalBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    modal.style.display = "block"
+});
+
+closeBtn.onclick = function(){ 
+    modal.style.display = "none"
+  }
+
+window.onclick = function(e){
+    if(e.target == modal){
+      modal.style.display = "none"
+    }
+   }   
+
+
 // When the zip code form is submitted, grab the zip code, convert it to coordinates and get the weather data and icon
 zipcodeForm.addEventListener("submit", function(event) {
     event.preventDefault(); 

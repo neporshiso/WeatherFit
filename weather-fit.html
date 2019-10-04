@@ -21,12 +21,47 @@
                                 <img class="home-image" src="images/WhetherFitLogoCircle.png"/>
                             </a>
                         </div>
+                        <!-- Sign Up & Login Forms -->
                         <div class="navbar-end">
                             <div class="navbar-item">
                                 <div class="buttons">
-                                    <a class="button is-outlined">
+                                    <a class="button is-outlined" id="modalBtn">
                                     <strong>Sign up</strong>
                                     </a>
+                                    <div class="modal is-horizontal" id="modal">
+                                        <div class="modal-content">
+                                          <span class="close-btn" id="closeBtn">&times;</span>
+                                            <div class="field is-horizontal">
+                                                <div class="field-label is-normal">
+                                                  <label class="label">Preferred Name:</label>
+                                                </div>
+                                                <div class="field-body">
+                                                  <div class="field">
+                                                    <div class="control">
+                                                      <input class="input" type="text" placeholder="Normal sized input">
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            <div class="field is-horizontal">
+                                                <div class="field-label is-normal">
+                                                      <label class="label">Email: </label>
+                                                </div>
+                                                <div class="field-body">
+                                                    <div class="field">
+                                                        <div class="control">
+                                                          <input class="input" type="text" placeholder="Normal sized input">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="buttons">
+                                                <a class="button is-outlined">
+                                                    <strong>Sign me up! </strong>
+                                                </a>
+                                            </div>
+                                        </div>
+                                      </div>
                                     <a class="button">
                                         <strong>Login</strong>
                                     </a>
@@ -77,7 +112,7 @@
                                         </div>
                                         <!-- clothes images from js go here -->
                                         <div class="message-body weather-information has-text-light">
-                                            <p>Based on todays weather we recommend...</p>
+                                            <p>Based on today's weather we recommend...</p>
                                         </div>
                                         <div class="container flex-row" id="todayClothes">
                                         </div>
@@ -102,7 +137,7 @@
                                         </div>       
                                     </div>
                                     <div class="message-body weather-information has-text-light">
-                                        <p>Based on todays weather we recommend...</p>
+                                        <p>Based on tomorrow's weather we recommend...</p>
                                     </div>
                                     <!-- might be a good idea to put figures within it's own div-->
                                     <div class="container flex-row" id="tomorrowClothes">

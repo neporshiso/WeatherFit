@@ -39,7 +39,7 @@ function convertZipToCoordinates(zip) {
     });
 }
 
-function printOutfit (temp, temp2) { 
+function printOutfit (temp, temp2, todayPrecip, tmrwPrecip) { 
     let clothesToday= document.getElementById("todayClothes");
     let clothesTomorrow = document.getElementById("tomorrowClothes");
 
@@ -50,7 +50,9 @@ function printOutfit (temp, temp2) {
         cold:["images/greytshirt.png","images/jeans.png", "images/coat.png", "images/scarf.png", "images/blackjacket.png", "images/coat.png"], 
         wintry:["images/freezing.png"] 
     }; 
+
     let myOutfit = 0; 
+
     if (temp >= 80) myOutfit = outfits.hot;
     if (temp >= 65 && temp < 80) myOutfit = outfits.warm;
     if (temp >= 45 && temp < 64) myOutfit = outfits.chilly;
@@ -63,6 +65,13 @@ function printOutfit (temp, temp2) {
             newImg.setAttribute("class", "round image is-128x128");
             clothesToday.append(newImg);
         }
+    
+    if (todayPrecip > 0.35) {
+        newImg = document.createElement("img");
+        newImg.setAttribute("src", "images/umbrella.png");
+        newImg.setAttribute("class", "round image is-128x128");
+        clothesToday.append(newImg);
+    }
 
     let myTomorrowOutfit = 0; 
     if (temp2 >= 80) myTomorrowOutfit = outfits.hot;
@@ -77,7 +86,13 @@ function printOutfit (temp, temp2) {
             newImg2.setAttribute("class", "round image is-128x128");
             clothesTomorrow.append(newImg2);
         }
-        
+
+    if (tmrwPrecip > 0.35) {
+        newImg = document.createElement("img");
+        newImg.setAttribute("src", "images/umbrella.png");
+        newImg.setAttribute("class", "round image is-128x128");
+        clothesTomorrow.append(newImg);
+    }
         return myOutfit;
 }
 
@@ -87,6 +102,8 @@ function getWeather(coordinates) {
     let tmrTempHigh = document.getElementById("tmrTempHigh")
     let tmrTempLow = document.getElementById("tmrTempLow")
     let tmrRain= document.getElementById("tmrRainChance")
+
+    let hourlyPrecipProb = []
 
     let lat = coordinates[1];
     let lon = coordinates[0];
@@ -98,7 +115,16 @@ function getWeather(coordinates) {
         let tmrwTempHighValue = response.daily.data[0].apparentTemperatureHigh
         let tmrwTempLowValue = response.daily.data[0].apparentTemperatureLow
         let tmrwRainChanceValue = response.daily.data[0].precipProbability * 100
+        let tmrwRainChanceDec = response.daily.data[0].precipProbability
+
+        // loop over every hours precip probability and store in an array
+        response.hourly.data.forEach(element => {
+            hourlyPrecipProb.push(element.precipProbability);
+        });
         
+        // grab max precip value from array 
+        let maxHourlyProb = Math.max(...hourlyPrecipProb)
+
         // Populate DOM with weather data
         tempHtml.innerHTML = `${Math.round(apparentTemp)}&#176F`
         tmrTempHigh.innerHTML = `${Math.round(tmrwTempHighValue)}&#176F`
@@ -106,7 +132,7 @@ function getWeather(coordinates) {
         tmrRain.innerHTML = `${Math.round(tmrwRainChanceValue)}&#37;`
 
         // Call printOutfit 
-        printOutfit(apparentTemp, tmrwTempLowValue);
+        printOutfit(apparentTemp, tmrwTempLowValue, maxHourlyProb, tmrwRainChanceDec);
     });
 }
 

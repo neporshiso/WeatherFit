@@ -50,6 +50,12 @@
                             </div>
                         </form>
                     </div>
+                    <div class="level-item">
+                        <p>Dress me for <span id="todayLocation"></span></p>
+                    </div>
+                    <div class="level-right">
+                        <p>Placeholder Right</p>
+                    </div>
                 </div>
             </div>
 
@@ -62,15 +68,17 @@
                                     <article class="message">
                                         <div class="weather-wrapper">
                                             <div class="message-header">
-                                                <p> Today's Weather</p>
+                                                <p>Today</p>
                                             </div>
                                             <div class="message-body weather-information has-text-light">
                                                 <img id="weatherIcon"></img>
                                                 <p>It currently feels like <span id="feelsLike"></span> </p>
-                                                <p>in <span id="todayLocation"></span> </p>
                                             </div>
                                         </div>
                                         <!-- clothes images from js go here -->
+                                        <div class="message-body weather-information has-text-light">
+                                            <p>Based on todays weather we recommend...</p>
+                                        </div>
                                         <div class="container flex-row" id="todayClothes">
                                         </div>
                                     </article>
@@ -93,10 +101,11 @@
                                                 <p>Precipitation Chance: <span id="tmrRainChance"></span> </p>
                                         </div>       
                                     </div>
-                            
+                                    <div class="message-body weather-information has-text-light">
+                                        <p>Based on todays weather we recommend...</p>
+                                    </div>
                                     <!-- might be a good idea to put figures within it's own div-->
                                     <div class="container flex-row" id="tomorrowClothes">
-                                        
                                     </div>
                                 </article>
                             </div>

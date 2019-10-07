@@ -47,8 +47,10 @@ zipcodeForm.addEventListener("submit", function(event) {
     event.preventDefault();
     let clothesToday = document.getElementById("todayClothes");
     let clothesTomorrow = document.getElementById("tomorrowClothes");
+
     clothesTomorrow.innerHTML = "";
     clothesToday.innerHTML = "";
+
     let zipcodeValue = document.getElementById("zipcodeInput").value;
     convertZipToCoordinates(zipcodeValue);
     getIcon(zipcodeValue);
@@ -70,7 +72,10 @@ function convertZipToCoordinates(zip) {
 function printOutfit(temp, temp2, todayPrecip, tmrwPrecip) {
     let clothesToday = document.getElementById("todayClothes");
     let clothesTomorrow = document.getElementById("tomorrowClothes");
-    let todayPrecipPercentage = todayPrecip * 100;
+    let todayPrecipPercentage = (todayPrecip * 100).toFixed(2);
+    let todayPrecipSpan = document.getElementById("todayPrecip");
+
+    todayPrecipSpan.innerHTML = `There is a ${todayPrecipPercentage}%  chance of rain today`;
 
     var outfits = {
         hot: [
@@ -124,10 +129,10 @@ function printOutfit(temp, temp2, todayPrecip, tmrwPrecip) {
         newImg = document.createElement("img");
         newImg.setAttribute("src", "images/umbrella.png");
         newImg.setAttribute("class", "round image is-128x128");
-        newPara = document.createElement("p");
-        newPara.innerHTML = `There is a ${todayPrecipPercentage}%  chance of rain today`;
         clothesToday.append(newImg);
-        todayPrecipDiv.append(newPara);
+        // newPara = document.createElement("p");
+        // newPara.innerHTML = `There is a ${todayPrecipPercentage}%  chance of rain today`;
+        // todayPrecipDiv.append(newPara);
     }
 
     let myTomorrowOutfit = 0;
@@ -155,7 +160,6 @@ function printOutfit(temp, temp2, todayPrecip, tmrwPrecip) {
 
 function getWeather(coordinates) {
     let tempHtml = document.getElementById("feelsLike");
-
     let tmrTempHigh = document.getElementById("tmrTempHigh");
     let tmrTempLow = document.getElementById("tmrTempLow");
     let tmrRain = document.getElementById("tmrRainChance");

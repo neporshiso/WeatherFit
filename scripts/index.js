@@ -222,7 +222,7 @@ function getIcon(zip) {
 
 // IIFE with default city Atlanta, GA
 (function() {
-    convertZipToCoordinates(30342);
-    getIcon(30342);
+    convertZipToCoordinates(30318);
+    getIcon(30318);
     getDate();
 })();

@@ -70,7 +70,7 @@ function convertZipToCoordinates(zip) {
 function printOutfit(temp, temp2, todayPrecip, tmrwPrecip) {
     let clothesToday = document.getElementById("todayClothes");
     let clothesTomorrow = document.getElementById("tomorrowClothes");
-    let todayPrecipPercentage = todayPrecip * 100;
+    let todayPrecipPercentage = (todayPrecip * 100).toFixed(2);
 
     var outfits = {
         hot: [
@@ -128,6 +128,10 @@ function printOutfit(temp, temp2, todayPrecip, tmrwPrecip) {
         newPara.innerHTML = `There is a ${todayPrecipPercentage}%  chance of rain today`;
         clothesToday.append(newImg);
         todayPrecipDiv.append(newPara);
+    }
+
+    if (todayPrecip < 0.35) {
+        newPara.innerHTML = "";
     }
 
     let myTomorrowOutfit = 0;

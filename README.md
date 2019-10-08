@@ -1,6 +1,7 @@
 # WhetherFit
 
-THIS IS AN "MVP" DEMO for our FrontEnd DigitalCrafts Project
+THIS IS AN "MVP" DEMO for our FrontEnd DigitalCrafts Project. Development lasted from 9/30 - 10/7.
+Live Link: https://gracious-visvesvaraya-10d2bc.netlify.com/
 
 ## Description
 
